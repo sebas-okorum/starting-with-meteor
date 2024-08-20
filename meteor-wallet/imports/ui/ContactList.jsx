@@ -1,9 +1,11 @@
 import React, { memo } from "react";
 import {ContactsCollection} from "../api/ContactsCollection";
-import {useSubscribe, useFind} from 'meteor/react-meteor-data';
+import { useSubscribe, useFind} from 'meteor/react-meteor-data';
 
 export const ContactList = () => {
-  //const isLoading = useSubscribe('allContacts');
+  const isLoading = useSubscribe('allContacts');
+  //const contacts = useTracker(() => ContactsCollection.find({}, { sort: { createdAt: -1 }}).fetch());
+
   const contacts = useFind(() => ContactsCollection.find({}, { sort: { createdAt: -1 }}));
 
   const removeContact = (event, _id) => {
@@ -11,7 +13,7 @@ export const ContactList = () => {
     Meteor.call('contacts.remove', { contactId: _id });
   }
 
-  /*if(isLoading()) {
+  if(isLoading()) {
     return (
       <div>
         <div className="mt-10">
@@ -22,7 +24,7 @@ export const ContactList = () => {
       </div>
     )
   }
-*/
+
   const ContactItem = memo(({ contact }) => {
     return (
       <li className="py-4 flex items-center justify-between space-x-3">
