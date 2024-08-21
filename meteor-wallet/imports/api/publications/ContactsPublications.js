@@ -14,6 +14,5 @@ Meteor.publish("contacts", function publishContacts() {
       },
     }
   );
-  console.log(contacts);
   return contacts;
 });

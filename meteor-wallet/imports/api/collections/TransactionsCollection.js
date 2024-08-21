@@ -1,6 +1,8 @@
 import { Mongo } from "meteor/mongo";
 import SimpleSchema from "simpl-schema";
 import { WalletsCollection } from "./WalletsCollection";
+import 'meteor/aldeed:collection2/static';
+import 'meteor/aldeed:collection2/dynamic';
 
 export const TRANSFER_TYPE = "TRANSFER";
 export const ADD_TYPE = "ADD";
@@ -62,4 +64,4 @@ const TransactionsSchema = new SimpleSchema({
   },
 });
 
-// TransactionsCollection.attachSchema(TransactionsSchema);
+TransactionsCollection.attachSchema(TransactionsSchema);
