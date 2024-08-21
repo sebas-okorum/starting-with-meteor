@@ -19,4 +19,4 @@ const WalletsSchema = new SimpleSchema({
   },
 });
 
-WalletsCollection.attachSchema(WalletsSchema);
+// WalletsCollection.attachSchema(WalletsSchema);

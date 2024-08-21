@@ -15,6 +15,10 @@ const ContactsSchema = new SimpleSchema({
     type: String,
     optional: true,
   },
+  archived: {
+    type: Boolean,
+    defaultValue: false,
+  },
   walletId: {
     type: String,
     // regEx: SimpleSchema.RegEx.Id,
@@ -24,4 +28,4 @@ const ContactsSchema = new SimpleSchema({
   },
 });
 
-ContactsCollection.attachSchema(ContactsSchema);
+// ContactsCollection.attachSchema(ContactsSchema);
