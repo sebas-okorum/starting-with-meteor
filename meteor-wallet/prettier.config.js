@@ -1,1 +1,1 @@
-module.exports = require('@quave/eslint-config-quave/prettier.config');
+module.exports = require('@quave/eslint-config-quave/prettier.config'); 
