@@ -9,8 +9,9 @@ import "../api/publications/WalletsPublications";
 import { WalletsCollection } from "../api/collections/WalletsCollection";
 import "../infra/CustomError";
 
-Meteor.startup(() => {
-  if (!WalletsCollection.find().count()) {
+Meteor.startup(async () => {
+  const walletCount = await WalletsCollection.find().countAsync();
+  if (walletCount === 0) {
     WalletsCollection.insert({
       createdAt: new Date(),
     });
