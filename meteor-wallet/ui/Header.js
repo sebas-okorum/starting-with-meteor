@@ -11,7 +11,7 @@ export const Header = () => {
     <header className="bg-indigo-600">
       <nav className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8" aria-label="Top">
         <div className="flex w-full items-center justify-between border-b border-indigo-500 py-6 lg:border-none">
-          <div style={{ display: 'flex', justifyContent: 'space-between', width: '100%' }}>
+          <div style={{ display: 'flex', justifyContent: 'space-between', width: '100%' }} >
             <div>
               <a
                 className="cursor-pointer"
@@ -25,7 +25,7 @@ export const Header = () => {
               {!isLoadingLoggedUser && !loggedUser && (
                 <button
                   className="font-bold text-white"
-                  onClick={() => navigate(RoutePaths.SIGN_UP)}
+                  onClick={() => navigate(RoutePaths.ACCESS)}
                 >
                   Sign Up
                 </button>

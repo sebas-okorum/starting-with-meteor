@@ -8,6 +8,7 @@ import "../api/publications/ContactsPublications";
 import "../api/publications/WalletsPublications";
 import { WalletsCollection } from "../api/collections/WalletsCollection";
 import "../infra/CustomError";
+import '../infra/Accounts';
 
 Meteor.startup(async () => {
   const walletCount = await WalletsCollection.find().countAsync();
