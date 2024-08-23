@@ -20,7 +20,7 @@ export const ResetPassword = () => {
         setError(err);
         return;
       }
-      setPassword('');
+      setPassword(password);
       setError(null);
       openAlert('Your new password is set, please sign in!');
       navigate(RoutePaths.ACCESS);

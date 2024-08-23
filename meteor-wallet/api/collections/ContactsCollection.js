@@ -1,11 +1,7 @@
-import { Mongo } from "meteor/mongo";
-import SimpleSchema from "simpl-schema";
-import 'meteor/aldeed:collection2/static';
-import 'meteor/aldeed:collection2/dynamic';
+import { Mongo } from 'meteor/mongo';
+import SimpleSchema from 'simpl-schema';
 
-Collection2.load();
-
-export const ContactsCollection = new Mongo.Collection("contacts");
+export const ContactsCollection = new Mongo.Collection('contacts');
 
 const ContactsSchema = new SimpleSchema({
   name: {
@@ -29,6 +25,9 @@ const ContactsSchema = new SimpleSchema({
   },
   createdAt: {
     type: Date,
+  },
+  userId: {
+    type: String,
   },
 });
 
