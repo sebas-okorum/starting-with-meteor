@@ -27,3 +27,4 @@ quave:alert-react-tailwind
 quave:email-postmark@1.0.1
 alanning:roles
 quave:accounts-passwordless-react
+accounts-google

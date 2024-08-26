@@ -1,8 +1,10 @@
 {
-    "packages": {
-      "quave:email-postmark": {
-        "from": "noreply@codeftw.dev",
-        "apiToken": "e8e4a512-8474-4b59-9cfa-05b094b9cfd0"
-      }
+  "packages": {
+    "quave:email-postmark": {
+      "from": "sebastian.gomez@okorum.com",
+      "apiToken": "e8e4a512-8474-4b59-9cfa-05b094b9cfd0"
     }
-  }
+  },
+  "googleClientId": "1084343000327-3luqhgvgkg4an52qt3sr2gt42mi2e685.apps.googleusercontent.com",
+  "googleSecret": "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"
+}
